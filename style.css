@@ -146,8 +146,15 @@ main.page a { color: var(--ink); }
   display: block;
 }
 .card-body { min-width: 0; }
-.card-links { margin-top: 8px !important; }
+.card-links { margin-top: 8px !important; display: flex; gap: 14px; align-items: center; }
 .card-links a { color: var(--ink); }
+.card-license {
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 8px;
+}
 
 /* Footer */
 footer {
