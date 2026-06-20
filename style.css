@@ -114,6 +114,22 @@ main.page a { color: var(--ink); }
   font-size: 1.4rem;
   font-weight: 400;
 }
+.apps h3 a { color: var(--ink); text-decoration: none; }
+.apps h3 a:hover { text-decoration: underline; }
+a.card-logo { text-decoration: none; }
+
+/* App detail page */
+.app-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+.app-head .card-logo {
+  width: 72px;
+  height: 72px;
+}
+.app-head h2 { margin: 0; }
 .apps p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
 .empty {
   color: var(--muted);
