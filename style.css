@@ -136,6 +136,29 @@ a.card-logo { text-decoration: none; }
   font-weight: 400;
 }
 
+/* Coverage map */
+.map-figure { margin: 24px 0 8px; }
+.us-map { display: block; width: 100%; height: auto; }
+.us-map path { stroke: #fff; stroke-width: 1; }
+.us-map .yes { fill: #2e9b57; }
+.us-map .no { fill: #cf4a3c; }
+.map-legend {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.map-legend .key { display: inline-flex; align-items: center; gap: 8px; }
+.map-legend .swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.map-legend .swatch.yes { background: #2e9b57; }
+.map-legend .swatch.no { background: #cf4a3c; }
+
 /* Coverage table */
 .table-wrap { margin-top: 20px; overflow-x: auto; }
 table.coverage {
