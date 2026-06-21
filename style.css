@@ -130,6 +130,38 @@ a.card-logo { text-decoration: none; }
   height: 72px;
 }
 .app-head h2 { margin: 0; }
+.section {
+  margin: 48px 0 12px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* Coverage table */
+.table-wrap { margin-top: 20px; overflow-x: auto; }
+table.coverage {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+table.coverage th,
+table.coverage td {
+  text-align: left;
+  padding: 7px 14px;
+  border-bottom: 1px solid var(--line);
+}
+table.coverage thead th {
+  font-weight: 400;
+  color: var(--muted);
+  border-bottom: 1px solid var(--ink);
+}
+table.coverage th:not(:first-child),
+table.coverage td:not(:first-child) {
+  text-align: center;
+  width: 5.5rem;
+}
+table.coverage td.yes { color: var(--ink); }
+table.coverage td.no { color: var(--line); }
+table.coverage tbody tr:hover { background: #fafafa; }
 .apps p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
 .empty {
   color: var(--muted);
