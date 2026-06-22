@@ -136,6 +136,14 @@ a.card-logo { text-decoration: none; }
   font-weight: 400;
 }
 
+/* Join the beta */
+.join-test {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
 /* Coverage map */
 .map-figure { margin: 24px 0 8px; }
 .us-map { display: block; width: 100%; height: auto; }
