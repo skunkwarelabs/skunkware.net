@@ -141,7 +141,7 @@ a.card-logo { text-decoration: none; }
 .us-map { display: block; width: 100%; height: auto; }
 .us-map path { stroke: #fff; stroke-width: 1; }
 .us-map .yes { fill: #2e9b57; }
-.us-map .no { fill: #cf4a3c; }
+.us-map .no { fill: #3a72b8; }
 .map-legend {
   display: flex;
   gap: 24px;
@@ -157,7 +157,7 @@ a.card-logo { text-decoration: none; }
   display: inline-block;
 }
 .map-legend .swatch.yes { background: #2e9b57; }
-.map-legend .swatch.no { background: #cf4a3c; }
+.map-legend .swatch.no { background: #3a72b8; }
 
 /* Coverage table */
 .table-wrap { margin-top: 20px; overflow-x: auto; }
