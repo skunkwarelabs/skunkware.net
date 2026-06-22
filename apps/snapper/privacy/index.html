@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snapper Privacy &middot; skunkware</title>
+<meta name="description" content="Privacy policy for Snapper &mdash; the skunkware fishing app. Everything stays on your phone.">
+<link rel="icon" href="/skunkware.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  /* Minimal page-scoped styles for the policy's sections + lists, matching the
+     site's weight-400, monospace aesthetic (shared style.css only styles h2/p). */
+  main.page h3 {
+    font-weight: 400;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    margin: 44px 0 10px;
+  }
+  main.page ul { padding-left: 1.2rem; margin: 0; }
+  main.page li { font-size: 1.08rem; line-height: 1.7; margin: 6px 0; }
+  main.page .updated { color: var(--muted); font-size: 0.95rem; margin: 0 0 36px; }
+  main.page .tldr {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 0 0 8px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/" aria-label="skunkware home">
+      <img class="wordmark" src="/header.png" alt="skunkware">
+    </a>
+    <nav>
+      <a href="/apps" class="active">Apps</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h2>Privacy Policy</h2>
+    <p class="lede">Snapper &mdash; the skunkware fishing app.</p>
+    <p class="updated">Last updated: June 21, 2026</p>
+
+    <p class="tldr">
+      The short version: <strong>everything stays on your phone.</strong> Snapper has no
+      accounts and no servers. skunkware never receives your catches, your saved spots,
+      your photos, or your location. There is no tracking, no analytics, and no ads.
+    </p>
+
+    <h3>What Snapper stores</h3>
+    <p>
+      Everything you create in Snapper is saved only in the app's private storage on your
+      device:
+    </p>
+    <ul>
+      <li><strong>Catches</strong> &mdash; the photo, species, length/weight, notes, time, and (if available) the GPS location of each fish you log.</li>
+      <li><strong>Saved spots</strong> &mdash; the coordinates, an optional name, and an optional photo for fishing spots you save.</li>
+    </ul>
+    <p>
+      None of this is transmitted to skunkware or anyone else. It lives in app-private
+      storage, is excluded from Android cloud backups, and is permanently deleted when you
+      remove a catch or spot in the app, or when you uninstall Snapper.
+    </p>
+
+    <h3>Permissions</h3>
+    <ul>
+      <li><strong>Camera</strong> &mdash; to photograph your catches and spots. Photos are saved on your device only.</li>
+      <li><strong>Location</strong> &mdash; to stamp a catch with where you caught it, to save a spot, to center the map on you, and to find water near you. Your location is used on the device and stored on the device; it is not sent to skunkware.</li>
+      <li><strong>Internet</strong> &mdash; to load map imagery, search for places, and fetch reference photos for fish species (see below).</li>
+    </ul>
+
+    <h3>Fish identification</h3>
+    <p>
+      Snapper identifies fish <strong>entirely on your device</strong> using a built-in
+      model. Your photos are never uploaded for identification &mdash; or for any other
+      reason.
+    </p>
+
+    <h3>Third-party services</h3>
+    <p>
+      To show maps and reference material, the app talks directly to a few public services.
+      It sends them only what's needed for the feature you're using &mdash; never your saved
+      catches, spots, or personal photos:
+    </p>
+    <ul>
+      <li><strong>OpenStreetMap / Overpass</strong> and the map-tile providers <strong>CARTO</strong> and <strong>Esri</strong> &mdash; receive the map area you are currently viewing, to draw the map and find nearby water.</li>
+      <li><strong>Your device's location service</strong> (typically Google, via Android's geocoder) &mdash; when you search for a place or the app converts coordinates to a place name.</li>
+      <li><strong>Wikipedia</strong> &mdash; to fetch a reference photo for a fish species you view.</li>
+    </ul>
+    <p>
+      These providers handle that data under their own privacy policies. Snapper does not
+      share your identity with them &mdash; it has no identity for you to share.
+    </p>
+
+    <h3>Children</h3>
+    <p>
+      Snapper is not directed at children and collects no personal information for
+      advertising or tracking from anyone.
+    </p>
+
+    <h3>Changes</h3>
+    <p>
+      If this policy changes, the updated version will be posted on this page with a new
+      date above.
+    </p>
+
+    <h3>Contact</h3>
+    <p>
+      Questions? Email <a href="mailto:mason@skunkware.net">mason@skunkware.net</a>.
+    </p>
+  </main>
+
+  <footer>
+    &copy; skunkware &middot; free software, released under the <a href="/license">AGPLv3</a>
+    &middot; <a href="https://github.com/skunkwarelabs/skunkware.net">website source</a>
+  </footer>
+</body>
+</html>
