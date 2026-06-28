@@ -145,6 +145,28 @@ a.card-logo { text-decoration: none; }
   margin-top: 16px;
 }
 
+/* Screenshot gallery (Play-Store style) */
+.shots {
+  display: flex;
+  gap: 14px;
+  margin: 28px 0 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+.shots .shot {
+  flex: none;
+  scroll-snap-align: start;
+}
+.shots .shot img {
+  display: block;
+  height: clamp(360px, 60vh, 520px);
+  width: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
 /* Coverage map */
 .map-figure { margin: 24px 0 8px; }
 .us-map { display: block; width: 100%; height: auto; }
