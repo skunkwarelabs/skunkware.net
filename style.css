@@ -42,6 +42,19 @@ nav a {
 }
 nav a:hover, nav a.active { color: var(--ink); }
 
+/* Will County road map overlay (about page) */
+.map-bg {
+  position: fixed;
+  inset: 0;
+  background: url(/will-county.svg) center / contain no-repeat;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+.map-page header,
+.map-page main,
+.map-page footer { position: relative; z-index: 1; }
+
 /* Hero (index) */
 main.hero {
   flex: 1;
