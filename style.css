@@ -118,6 +118,13 @@ main.page a { color: var(--ink); }
 .apps h3 a:hover { text-decoration: underline; }
 a.card-logo { text-decoration: none; }
 
+/* Inline B-emoji glyph (the keyBoard logo, used mid-text) */
+.bmoji {
+  height: 0.95em;
+  width: auto;
+  vertical-align: -0.12em;
+}
+
 /* App detail page */
 .app-head {
   display: flex;
