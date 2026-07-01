@@ -1,10 +1,16 @@
 :root {
-  --ink: #1a1a1a;
-  --muted: #6b6b6b;
+  --ink: #000;
+  --muted: #000;
   --line: #e7e7e7;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* Links: black + underlined everywhere */
+a { color: var(--ink); text-decoration: underline; }
+/* ...except image-only links, where an underline would just float in space */
+header a.brand, a.card-logo { text-decoration: none; }
 body {
   background: #fff;
   color: var(--ink);
@@ -24,7 +30,6 @@ header {
   flex-wrap: wrap;
   gap: 16px;
   padding: 22px clamp(20px, 5vw, 56px);
-  border-bottom: 1px solid var(--line);
 }
 header a.brand { display: inline-flex; }
 header img.wordmark {
@@ -34,22 +39,33 @@ header img.wordmark {
 }
 nav { display: flex; gap: clamp(18px, 4vw, 40px); }
 nav a {
-  color: var(--muted);
-  text-decoration: none;
+  color: var(--ink);
+  text-decoration: underline;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
-  transition: color 0.15s ease;
 }
-nav a:hover, nav a.active { color: var(--ink); }
+nav a.active { font-weight: 600; }
 
-/* Will County road map overlay (about page) */
+/* Will County road map overlay (all pages) */
 .map-bg {
   position: fixed;
   inset: 0;
-  background: url(/will-county.svg) center / cover no-repeat;
+  background: url(/will-county.svg) center / contain no-repeat;
   opacity: 0.16;
   pointer-events: none;
   z-index: 0;
+  /* zoomed out to show the whole street grid incl. the little roads;
+     scale gives the parallax drift room without baring white edges */
+  transform: translateY(-5%) scale(1.08);
+  will-change: transform;
+  animation: map-drift linear both;
+  animation-timeline: scroll(root block);
+}
+/* Parallax: bg drifts slower than the page as you scroll.
+   Browsers without scroll-driven animations just keep it fixed. */
+@keyframes map-drift {
+  from { transform: translateY(-5%) scale(1.08); }
+  to   { transform: translateY(5%) scale(1.08); }
 }
 .map-page header,
 .map-page main,
@@ -128,9 +144,7 @@ main.page a { color: var(--ink); }
   font-size: 1.4rem;
   font-weight: 400;
 }
-.apps h3 a { color: var(--ink); text-decoration: none; }
-.apps h3 a:hover { text-decoration: underline; }
-a.card-logo { text-decoration: none; }
+.apps h3 a { color: var(--ink); text-decoration: underline; }
 
 /* App detail page */
 .app-head {
@@ -302,7 +316,6 @@ table.coverage tbody tr:hover { background: #fafafa; }
 /* Footer */
 footer {
   padding: 20px clamp(20px, 5vw, 56px);
-  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9rem;
   text-align: center;
